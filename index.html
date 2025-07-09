@@ -9,29 +9,20 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #232526, #414345);
+      font-family: Arial, sans-serif;
       color: white;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
     .container {
-      position: relative;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       margin-bottom: 20px;
     }
     a.button {
@@ -46,10 +37,9 @@
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
   <div class="container">
-    <h1>سجل الدخول عبر Discord</h1>
-    <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1392276049601101906&redirect_uri=https%3A%2F%2Fzoryn.vercel.app%2Fapi%2Fdiscord-auth&response_type=code&scope=identify">CONNECT</a>
+    <h1>سجّل الدخول عبر Discord</h1>
+    <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1392276049601101906&redirect_uri=https://zorynweb.vercel.app/api/discord-auth&response_type=code&scope=identify">CONNECT</a>
   </div>
 </body>
 </html>
