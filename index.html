@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoryn App</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .navbar a {
+      text-decoration: none;
+      background: linear-gradient(to right, #a64bf4, #5e66f2);
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      color: white;
+      text-align: center;
+    }
+    .main h1 {
+      font-size: 3em;
+    }
+    .main a.button {
+      margin-top: 30px;
+      text-decoration: none;
+      background: #a64bf4;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">HOME</a>
+    <a href="#">TASKS</a>
+    <a href="#">REFERRAL</a>
+    <a href="#">BOARD</a>
+    <a href="/api/discord-auth">CONNECT</a>
+  </div>
+
+  <div class="main">
+    <h1>THE NEXT FRONTIER OF <br /> AI-POWERED GAMING</h1>
+    <a class="button" href="#">NEXT SLIDE</a>
+  </div>
+</body>
+</html>
