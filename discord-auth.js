@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
   params.append('client_id', '1392276049601101906');
   params.append('client_secret', 'cqJ1fF-UU3nPvYlEs8foddGVqx4JtV3o');
   params.append('grant_type', 'authorization_code');
-  params.append('redirect_uri', 'https://zoryn.vercel.app/auth/discord/callback');
+  params.append('redirect_uri', 'https://zoryn.vercel.app/api/discord-auth');
   params.append('code', code);
 
   try {
@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
       }
     });
     const user = await userInfo.json();
-    return res.status(200).json({ user });
+    return res.status(200).send(`<h2>مرحبا، ${user.username}#${user.discriminator}</h2><img src='https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png' width='100' />`);
   } catch (err) {
     return res.status(500).send('Error during Discord OAuth');
   }

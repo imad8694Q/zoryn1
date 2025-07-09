@@ -4,62 +4,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zoryn App</title>
+  <title>Zoryn Login</title>
   <style>
     body {
       margin: 0;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      font-family: Arial, sans-serif;
-    }
-    .navbar {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.4);
-    }
-    .navbar a {
-      text-decoration: none;
-      background: linear-gradient(to right, #a64bf4, #5e66f2);
-      padding: 10px 20px;
-      border-radius: 20px;
+      padding: 0;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
-      font-weight: bold;
     }
-    .main {
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .container {
+      position: relative;
+      height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      margin-top: 100px;
-      color: white;
-      text-align: center;
     }
-    .main h1 {
+    h1 {
       font-size: 3em;
+      margin-bottom: 20px;
     }
-    .main a.button {
-      margin-top: 30px;
+    a.button {
+      padding: 15px 30px;
+      background-color: #7289da;
+      border-radius: 10px;
       text-decoration: none;
-      background: #a64bf4;
       color: white;
-      padding: 12px 25px;
-      border-radius: 25px;
       font-weight: bold;
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <a href="#">HOME</a>
-    <a href="#">TASKS</a>
-    <a href="#">REFERRAL</a>
-    <a href="#">BOARD</a>
-    <a href="/api/discord-auth">CONNECT</a>
-  </div>
-
-  <div class="main">
-    <h1>THE NEXT FRONTIER OF <br /> AI-POWERED GAMING</h1>
-    <a class="button" href="#">NEXT SLIDE</a>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>سجل الدخول عبر Discord</h1>
+    <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1392276049601101906&redirect_uri=https%3A%2F%2Fzoryn.vercel.app%2Fapi%2Fdiscord-auth&response_type=code&scope=identify">CONNECT</a>
   </div>
 </body>
 </html>
