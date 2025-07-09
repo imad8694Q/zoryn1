@@ -29,7 +29,15 @@ module.exports = async (req, res) => {
       }
     });
     const user = await userInfo.json();
-    return res.status(200).send(`<h2>مرحبا، ${user.username}#${user.discriminator}</h2><img src='https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png' width='100' />`);
+
+    const queryParams = new URLSearchParams({
+      username: user.username,
+      discriminator: user.discriminator,
+      id: user.id,
+      avatar: user.avatar
+    });
+
+    return res.redirect(`/welcome.html?${queryParams.toString()}`);
   } catch (err) {
     return res.status(500).send('Error during Discord OAuth');
   }
